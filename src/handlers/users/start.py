@@ -28,7 +28,7 @@ async def user_start(message: Message, bot: Bot, config: Config):
         # users = await services.user_service.get_all_users(user_filter=UserFilter(updated_datetime_from=None,
         #                                                                          updated_datetime_to=None))
 
-        msg = """Assalomu alaykum. Ushbu bot orqali siz habaringizni Hasan Tuyliyevga yuborishingiz mumkin bo'ladi. 
+        msg = f"""Assalomu alaykum. Ushbu bot orqali siz habaringizni {config.misc.owner}ga yuborishingiz mumkin bo'ladi. 
             \nTaklif va murojatlarni yo'llashingiz mumkin.    
             \nBizni va o'zingizni vaqtingizni qadrlagan holda yozing.
             \nIltimos odob saqlang!"""
