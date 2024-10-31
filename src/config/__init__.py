@@ -149,12 +149,14 @@ class RedisConfig:
 class Miscellaneous:
     channel_ids: list[int]
     group_id: int
+    owner: str
 
     @staticmethod
     def from_env(env: Env):
         channel_ids = env.list("CHANNELS", subcast=int)
         group_id = env.int("GROUP")
-        return Miscellaneous(channel_ids=channel_ids, group_id=group_id)
+        owner = env.str("OWNER")
+        return Miscellaneous(channel_ids=channel_ids, group_id=group_id, owner=owner)
 
 
 @dataclass
